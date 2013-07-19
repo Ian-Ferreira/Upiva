@@ -1,0 +1,101 @@
+
+game2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+game2
+  rotate: false
+  xy: 1, 1
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+game22.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+symbols/symbol1
+  rotate: false
+  xy: 1, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol2
+  rotate: false
+  xy: 73, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol3
+  rotate: false
+  xy: 145, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol4
+  rotate: false
+  xy: 217, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol5
+  rotate: false
+  xy: 289, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol6
+  rotate: false
+  xy: 361, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol7
+  rotate: false
+  xy: 433, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbol8
+  rotate: false
+  xy: 505, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbolA
+  rotate: false
+  xy: 577, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbolJ
+  rotate: false
+  xy: 649, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbolK
+  rotate: false
+  xy: 721, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1
+symbols/symbolQ
+  rotate: false
+  xy: 793, 1
+  size: 70, 70
+  orig: 70, 70
+  offset: 0, 0
+  index: -1

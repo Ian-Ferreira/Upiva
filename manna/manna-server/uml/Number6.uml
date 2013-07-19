@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.upiva.manna.server.Number6</OriginalElement>
+  <nodes>
+    <node x="0.0" y="156.0">com.upiva.manna.server.ServerConfig</node>
+    <node x="330.37499999999994" y="244.0">com.upiva.manna.server.dom.jdbc.DomainServiceImplJdbc</node>
+    <node x="761.9465579710144" y="156.0">com.upiva.manna.server.cns.ConsumerServiceJSP</node>
+    <node x="1077.9465579710145" y="156.0">com.upiva.manna.server.dom.db4o.DatabaseSessionImplDb4o</node>
+    <node x="0.0" y="317.0">com.upiva.manna.server.svr.IServerConnector</node>
+    <node x="473.1802536231883" y="78.0">com.upiva.manna.server.dom.IDomainService</node>
+    <node x="119.05525362318832" y="0.0">com.upiva.manna.server.cns.IConsumerManager</node>
+    <node x="89.99999999999994" y="78.0">com.upiva.manna.server.IServer</node>
+    <node x="1215.0489130434783" y="78.0">com.upiva.manna.server.dom.IDatabaseSession</node>
+    <node x="915.9465579710144" y="156.0">com.upiva.manna.server.cns.ConsumerServiceREST</node>
+    <node x="1258.9465579710145" y="156.0">com.upiva.manna.server.dom.jdbc.DatabaseSessionImplJdbc</node>
+    <node x="76.94655797101439" y="244.0">com.upiva.manna.server.Number6</node>
+    <node x="598.9465579710144" y="156.0">com.upiva.manna.server.cns.ConsumerServiceJSON</node>
+    <node x="454.0652173913044" y="156.0">com.upiva.manna.server.dom.AbstractDomain</node>
+    <node x="194.18025362318832" y="78.0">com.upiva.manna.server.cns.ConsumerManager</node>
+    <node x="519.1902173913044" y="0.0">com.upiva.manna.server.cns.IConsumerService</node>
+    <node x="214.19655797101439" y="156.0">com.upiva.manna.server.svr.Broker</node>
+    <node x="756.578804347826" y="78.0">com.upiva.manna.server.cns.AbstractConsumerService</node>
+    <node x="579.328804347826" y="244.0">com.upiva.manna.server.dom.db4o.DomainServiceImplDb4o</node>
+    <node x="338.1802536231883" y="78.0">com.upiva.manna.server.dom.IDomainManager</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.upiva.manna.server.svr.Broker" target="com.upiva.manna.server.dom.IDomainManager">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.jdbc.DomainServiceImplJdbc" target="com.upiva.manna.server.dom.IDomainService">
+      <point x="-36.5" y="-14.0" />
+      <point x="366.87499999999994" y="224.0" />
+      <point x="401.87499999999994" y="224.0" />
+      <point x="401.87499999999994" y="136.0" />
+      <point x="491.1802536231883" y="136.0" />
+      <point x="-36.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.AbstractDomain" target="com.upiva.manna.server.dom.IDomainManager">
+      <point x="-27.5" y="-14.0" />
+      <point x="481.5652173913044" y="126.0" />
+      <point x="424.4302536231883" y="126.0" />
+      <point x="28.75" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.svr.Broker" target="com.upiva.manna.server.cns.ConsumerManager">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.AbstractDomain" target="com.upiva.manna.server.dom.IDomainService">
+      <point x="27.5" y="-14.0" />
+      <point x="536.5652173913044" y="136.0" />
+      <point x="527.1802536231883" y="136.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.cns.ConsumerServiceJSON" target="com.upiva.manna.server.cns.AbstractConsumerService">
+      <point x="0.0" y="-14.0" />
+      <point x="670.4465579710144" y="136.0" />
+      <point x="782.9121376811594" y="136.0" />
+      <point x="-52.66666666666666" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.jdbc.DomainServiceImplJdbc" target="com.upiva.manna.server.dom.AbstractDomain">
+      <point x="36.5" y="-14.0" />
+      <point x="439.87499999999994" y="224.0" />
+      <point x="481.5652173913044" y="224.0" />
+      <point x="-27.5" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.jdbc.DatabaseSessionImplJdbc" target="com.upiva.manna.server.dom.IDatabaseSession">
+      <point x="0.0" y="-14.0" />
+      <point x="1337.9465579710145" y="136.0" />
+      <point x="1305.0489130434783" y="136.0" />
+      <point x="30.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.cns.ConsumerManager" target="com.upiva.manna.server.cns.IConsumerService">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.cns.ConsumerServiceJSP" target="com.upiva.manna.server.cns.AbstractConsumerService">
+      <point x="0.0" y="-14.0" />
+      <point x="828.9465579710144" y="136.0" />
+      <point x="835.578804347826" y="136.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.Number6" target="com.upiva.manna.server.IServer">
+      <point x="9.625" y="-14.0" />
+      <point x="125.07155797101439" y="204.0" />
+      <point x="107.49999999999994" y="204.0" />
+      <point x="-17.5" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.Number6" target="com.upiva.manna.server.ServerConfig">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.cns.ConsumerManager" target="com.upiva.manna.server.cns.IConsumerManager">
+      <point x="-31.0" y="-14.0" />
+      <point x="225.18025362318832" y="53.0" />
+      <point x="215.05525362318832" y="53.0" />
+      <point x="32.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.Number6" target="com.upiva.manna.server.svr.Broker">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.db4o.DatabaseSessionImplDb4o" target="com.upiva.manna.server.dom.IDatabaseSession">
+      <point x="0.0" y="-14.0" />
+      <point x="1158.4465579710145" y="136.0" />
+      <point x="1245.0489130434783" y="136.0" />
+      <point x="-30.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.db4o.DomainServiceImplDb4o" target="com.upiva.manna.server.dom.IDomainService">
+      <point x="0.0" y="-14.0" />
+      <point x="653.828804347826" y="214.0" />
+      <point x="588.4465579710144" y="214.0" />
+      <point x="588.4465579710144" y="136.0" />
+      <point x="563.1802536231883" y="136.0" />
+      <point x="36.0" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.svr.Broker" target="com.upiva.manna.server.IServer">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.svr.Broker" target="com.upiva.manna.server.cns.IConsumerManager">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.cns.AbstractConsumerService" target="com.upiva.manna.server.cns.IConsumerService">
+      <point x="0.0" y="-14.0" />
+      <point x="835.578804347826" y="53.0" />
+      <point x="609.9402173913044" y="53.0" />
+      <point x="30.25" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.db4o.DomainServiceImplDb4o" target="com.upiva.manna.server.dom.AbstractDomain">
+      <point x="-49.66666666666666" y="-14.0" />
+      <point x="604.1621376811594" y="224.0" />
+      <point x="536.5652173913044" y="224.0" />
+      <point x="27.5" y="14.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.dom.db4o.DomainServiceImplDb4o" target="com.upiva.manna.server.dom.db4o.DatabaseSessionImplDb4o">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="com.upiva.manna.server.cns.ConsumerServiceREST" target="com.upiva.manna.server.cns.AbstractConsumerService">
+      <point x="0.0" y="-14.0" />
+      <point x="986.9465579710144" y="136.0" />
+      <point x="888.2454710144926" y="136.0" />
+      <point x="52.66666666666663" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.7146833681280446" x="708.5" y="172.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

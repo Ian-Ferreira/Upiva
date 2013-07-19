@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<context title="MannaServer" version="1.0" copyright="Upiva Technologies (c) 2013" author="IanFerreira@yahoo.co.uk">
+	<properties>
+		<property name="debug.mode">true</property>
+		<property name="debug.delete.database">true</property>
+	</properties>
+	<consumers>
+		<consumer class="com.upiva.manna.server.cns.ConsumerServiceJSON" freeMax="32767" workMax="32767" timeout="5000"/>
+		<consumer class="com.upiva.manna.server.cns.ConsumerServiceREST" freeMax="32767" workMax="32767" timeout="15000"/>
+	</consumers>
+	<drivers>
+		<!--driver class="com.upiva.manna.server.drv.DriverServiceTCP7" name="TCP0" classQualifier="com.upiva.manna.server.qlf.MessageQualifierDefault" classConsumer="com.upiva.manna.server.cns.ConsumerServiceJSON">
+			<context>
+				<hostname>localhost</hostname>
+				<hostport>4545</hostport>
+				<poolsize>32767</poolsize>
+				<solinger>5000</solinger>
+				<toservice>256</toservice>
+				<sorvcbuf>4096</sorvcbuf>
+				<sosndbuf>4096</sosndbuf>
+				<backlog>256</backlog>
+				<sleeptime>500</sleeptime>
+				<killtime>5000</killtime>
+				<rxtimeout>5000</rxtimeout>
+				<txtimeout>15000</txtimeout>
+				<rxbufsize>4096</rxbufsize>
+				<nodelay>false</nodelay>
+				<broadcast>false</broadcast>
+				<keepalive>false</keepalive>
+				<reuseaddr>true</reuseaddr>
+			</context>
+		</driver-->
+		<driver class="com.upiva.manna.server.drv.tcp6c.DriverServiceTCP6c" name="TCP1" classQualifier="com.upiva.manna.server.qlf.MessageQualifierSizeMD5" classConsumer="com.upiva.manna.server.cns.ConsumerServiceJSON">
+			<context>
+				<hostname>localhost</hostname>
+				<hostport>4545</hostport>
+				<poolmin>8192</poolmin>
+				<poolmax>32767</poolmax>
+				<loadfactor>0.75</loadfactor>
+				<concrtlevel>4096</concrtlevel>
+				<keepalive>8192</keepalive>
+				<accepttime>1000</accepttime>
+				<acptlimit>10</acptlimit>
+				<readlimit>10</readlimit>
+				<wrtelimit>10</wrtelimit>
+				<sleeptime>500</sleeptime>
+				<killtime>5000</killtime>
+				<rxbufsize>1024</rxbufsize>
+				<fairness>true</fairness>
+			</context>
+		</driver>
+		<driver class="com.upiva.manna.server.drv.tcp6s.DriverServiceTCP6s" name="TCP2" classQualifier="com.upiva.manna.server.qlf.MessageQualifierSizeMD5" classConsumer="com.upiva.manna.server.cns.ConsumerServiceJSON">
+			<context>
+				<hostname>localhost</hostname>
+				<hostport>8284</hostport>
+				<poolmin>8192</poolmin>
+				<poolmax>32767</poolmax>
+				<loadfactor>0.75</loadfactor>
+				<concrtlevel>4096</concrtlevel>
+				<keepalive>8192</keepalive>
+				<accepttime>1000</accepttime>
+				<sleeptime>500</sleeptime>
+				<killtime>5000</killtime>
+				<rxbufsize>1024</rxbufsize>
+				<fairness>true</fairness>
+			</context>
+		</driver>
+		<driver class="com.upiva.manna.server.drv.DriverServiceUDP" name="UDP1" classQualifier="com.upiva.manna.server.qlf.MessageQualifierDefault" classConsumer="com.upiva.manna.server.cns.ConsumerServiceJSON">
+			<context>
+				<hostname>localhost</hostname>
+				<hostport>2323</hostport>
+				<sotimeout>1000</sotimeout>
+			</context>
+		</driver>
+		<driver class="com.upiva.manna.server.drv.DriverServiceAMQP" name="AMQP1" classQualifier="com.upiva.manna.server.qlf.MessageQualifierDefault" classConsumer="com.upiva.manna.server.cns.ConsumerServiceREST">
+			<context>
+				<hostname>localhost</hostname>
+				<queueTx>upiva1-queue-tx</queueTx>
+				<queueRx>upiva1-queue-rx</queueRx>
+				<queueDl>upiva1-queue-dl</queueDl>
+			</context>
+		</driver>
+	</drivers>
+	<domains>
+		<domain class="com.upiva.manna.server.dom.db4o.DomainServiceImplDb4o" name="MannaGames" poolmin="16" poolmax="1024" cmdclspath="com.upiva.manna.server.cmd.db4o" cmdpoolmax="1024" cmdtimeout="60000">
+			<context>
+				<datafile>./dbs/mannagame.db4o</datafile>
+				<username>admin</username>
+				<password>12345</password>
+				<usernameMinSize>5</usernameMinSize>
+				<usernameMaxSize>20</usernameMaxSize>
+				<passwordMinSize>5</passwordMinSize>
+				<passwordMaxSize>16</passwordMaxSize>
+				<transientAccess>true</transientAccess>
+				<grantEnrollAccess>false</grantEnrollAccess>
+				<grantConfirmAccess>false</grantConfirmAccess>
+				<useEnrollConfirmation>true</useEnrollConfirmation>
+				<enrollPincodeMultiplier>1000000</enrollPincodeMultiplier>
+				<debugBypassConfirmPincode>989796</debugBypassConfirmPincode>
+				<newGamerCoinsGrant>1000</newGamerCoinsGrant>
+				<enrollPendingExpireDays>90</enrollPendingExpireDays>
+			</context>
+		</domain>
+		<domain class="com.upiva.manna.server.dom.db4o.DomainServiceImplDb4o" name="Upiva1" poolmin="16" poolmax="1024" cmdclspath="com.upiva.manna.server.cmd.db4o" cmdpoolmax="1024" cmdtimeout="5000">
+			<context>
+				<datafile>./dbs/upiva1.db4o</datafile>
+				<username>admin</username>
+				<password>12345</password>
+			</context>
+		</domain>
+		<domain class="com.upiva.manna.server.dom.jdbc.DomainServiceImplJdbc" name="Upiva2" poolmin="16" poolmax="1024" cmdclspath="com.upiva.manna.server.cmd.db4o" cmdpoolmax="1024" cmdtimeout="5000">
+			<context>
+				<datasource>jdbc:mysql:driver.1.0.://upiva1;admin;12345</datasource>
+			</context>
+		</domain>
+	</domains>
+</context>

@@ -1,0 +1,40 @@
+/**
+ * By: IanF on 14/05/13 20:34
+ */
+
+package com.upiva.manna.game.utl.usr;
+
+
+import com.upiva.manna.game.utl.ldr.AssetsLoader;
+
+public class ProfileAgent {
+
+	///////////////////////////////////////////////////////////////////////////
+	// Data members
+
+	///////////////////////////////////////////////////////////////////////////
+	// Singleton control
+
+	private static ProfileAgent m_instance = new ProfileAgent();
+
+	private ProfileAgent() {
+	}
+
+	public static ProfileAgent getInstance() {
+		return m_instance;
+	}
+
+	///////////////////////////////////////////////////////////////////////////
+	// Public methods
+
+	///////////////////////////////////////////////////////////////////////////
+	// Private helpers
+
+	///////////////////////////////////////////////////////////////////////////
+	// Static utilities
+
+	public static IUserProfile acquire( final AssetsLoader loader, final IUserToken token ) {
+		return null;
+	}
+
+}

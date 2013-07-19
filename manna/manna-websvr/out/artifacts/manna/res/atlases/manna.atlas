@@ -1,0 +1,48 @@
+
+manna.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+intro
+  rotate: false
+  xy: 1, 1
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+manna2.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+lobby
+  rotate: false
+  xy: 1, 1
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+manna3.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+outro
+  rotate: false
+  xy: 1, 1
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+manna4.png
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+splash
+  rotate: false
+  xy: 1, 1
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1

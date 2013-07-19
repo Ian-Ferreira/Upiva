@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">
+	<description>Manna Games Web Service Entry Point</description>
+	<display-name>Manna-Games-Web</display-name>
+	<distributable/>
+	<context-param>
+		<description>Web context data</description>
+		<param-name>web-context</param-name>
+		<param-value>value</param-value>
+	</context-param>
+
+	<servlet>
+		<description>Manna games web endpoint</description>
+		<display-name>MannaServletJson</display-name>
+		<servlet-name>MannaServletJSON</servlet-name>
+		<servlet-class>com.upiva.manna.websvr.MannaServletJSON</servlet-class>
+		<init-param>
+			<description>Server connector class connection context</description>
+			<param-name>serverConnectorContext</param-name>
+			<param-value>embed:com.upiva.manna.server.MannaServer%./cfg/server.xml</param-value>
+		</init-param>
+		<init-param>
+			<description>IConsumerService class to be invoked by this servlet</description>
+			<param-name>consumerServiceClass</param-name>
+			<param-value>com.upiva.manna.server.cns.ConsumerServiceJSON</param-value>
+		</init-param>
+		<init-param>
+			<description>Base64 decode query parameter values</description>
+			<param-name>base64DecodeValues</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</servlet>
+	<servlet>
+		<description>Manna management web endpoint</description>
+		<display-name>MannaServletRest</display-name>
+		<servlet-name>MannaServletREST</servlet-name>
+		<servlet-class>com.upiva.manna.websvr.MannaServletREST</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MannaServletJSON</servlet-name>
+		<url-pattern>/mannaJson</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MannaServletREST</servlet-name>
+		<url-pattern>/mannaRest</url-pattern>
+	</servlet-mapping>
+</web-app>
